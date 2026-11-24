@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبر معلوماتك - عصور ما قبل التاريخ</title>
+<style>
+* {box-sizing:border-box}
+body {
+  font-family:Tahoma,Arial,sans-serif;
+  background:#f2f4fa;
+  margin:0;
+  color:#26334a;
+}
+header {
+  background:linear-gradient(135deg,#542b91,#a34ab2);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+}
+header h1 {margin:0 0 10px}
+.container {
+  max-width:850px;
+  margin:25px auto;
+  padding:15px;
+}
+.progress-box {
+  background:white;
+  border-radius:12px;
+  padding:15px;
+  margin-bottom:20px;
+}
+progress {width:100%;height:14px;accent-color:#843caf}
+.question {
+  background:white;
+  border-radius:14px;
+  padding:20px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #0000000c;
+}
+.question h3 {color:#74349c;line-height:1.8}
+.option {
+  display:block;
+  background:#f4f1f9;
+  padding:13px;
+  margin:9px 0;
+  border-radius:9px;
+  cursor:pointer;
+  transition:.2s;
+}
+.option:hover {background:#e7dcf3}
+.option input {margin-left:9px}
+button {
+  background:#74349c;
+  color:white;
+  border:0;
+  padding:13px 25px;
+  border-radius:9px;
+  font-size:17px;
+  cursor:pointer;
+  margin:8px 4px;
+}
+button:hover {background:#522477}
+.result {
+  display:none;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  margin-top:20px;
+}
+.correct {color:green;font-weight:bold}
+.wrong {color:#d22;font-weight:bold}
+.feedback {margin-top:10px;line-height:1.8}
+footer {text-align:center;padding:20px;color:#777}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏺 رحلة عبر عصور ما قبل التاريخ</h1>
+  <p>اختبر معلوماتك واكتشف مستواك التاريخي!</p>
+</header>
+
+<div class="container">
+
+<div class="progress-box">
+  <strong>تقدمك في الاختبار:</strong>
+  <progress id="progress" value="0" max="12"></progress>
+  <span id="counter">0 / 12</span>
+</div>
+
+<form id="quiz">
+
+<div class="question" data-answer="a">
+<h3>1. ما نمط معيشة الإنسان في العصر الحجري القديم؟</h3>
+<label class="option"><input type="radio" name="q1" value="a"> الصيد وجمع الغذاء والترحال</label>
+<label class="option"><input type="radio" name="q1" value="b"> الزراعة والاستقرار</label>
+<label class="option"><input type="radio" name="q1" value="c"> الصناعة والتجارة</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="b">
+<h3>2. أين يقع موقع تيغنيف الأثري؟</h3>
+<label class="option"><input type="radio" name="q2" value="a"> سطيف</label>
+<label class="option"><input type="radio" name="q2" value="b"> معسكر</label>
+<label class="option"><input type="radio" name="q2" value="c"> تبسة</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="c">
+<h3>3. ما الذي ميز العصر الحجري الأوسط؟</h3>
+<label class="option"><input type="radio" name="q3" value="a"> اكتشاف الحديد</label>
+<label class="option"><input type="radio" name="q3" value="b"> ابتكار الكتابة</label>
+<label class="option"><input type="radio" name="q3" value="c"> ظهور الأدوات الصوانية وتطور صناعتها</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="a">
+<h3>4. ما الأنشطة التي ارتبطت بالعصر الحجري الحديث؟</h3>
+<label class="option"><input type="radio" name="q4" value="a"> الزراعة وتربية الحيوانات</label>
+<label class="option"><input type="radio" name="q4" value="b"> الصيد والترحال فقط</label>
+<label class="option"><input type="radio" name="q4" value="c"> صناعة الحديد فقط</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="b">
+<h3>5. أي موقع أثري يرتبط بالعصر المعدني؟</h3>
+<label class="option"><input type="radio" name="q5" value="a"> عين الحنش</label>
+<label class="option"><input type="radio" name="q5" value="b"> شرشال</label>
+<label class="option"><input type="radio" name="q5" value="c"> وادي الناطوف</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="c">
+<h3>6. متى ابتُكرت الكتابة حسب الدرس؟</h3>
+<label class="option"><input type="radio" name="q6" value="a"> 5000 ق.م</label>
+<label class="option"><input type="radio" name="q6" value="b"> 8000 ق.م</label>
+<label class="option"><input type="radio" name="q6" value="c"> 3200 ق.م</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="a">
+<h3>7. اعتمد الإنسان في العصر الحجري القديم على الصيد وجمع الغذاء.</h3>
+<label class="option"><input type="radio" name="q7" value="a"> صحيح</label>
+<label class="option"><input type="radio" name="q7" value="b"> خطأ</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="b">
+<h3>8. ظهر الاستقرار وممارسة الزراعة في العصر الحجري الأوسط.</h3>
+<label class="option"><input type="radio" name="q8" value="a"> صحيح</label>
+<label class="option"><input type="radio" name="q8" value="b"> خطأ</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="a">
+<h3>9. ساهمت الحاجة إلى تدوين المحاصيل والمعاملات التجارية والأحداث التاريخية في ابتكار الكتابة.</h3>
+<label class="option"><input type="radio" name="q9" value="a"> صحيح</label>
+<label class="option"><input type="radio" name="q9" value="b"> خطأ</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="c">
+<h3>10. ما الترتيب الصحيح للعصور من الأقدم إلى الأحدث؟</h3>
+<label class="option"><input type="radio" name="q10" value="a"> المعدني، الحديث، الأوسط، القديم</label>
+<label class="option"><input type="radio" name="q10" value="b"> القديم، الحديث، الأوسط، المعدني</label>
+<label class="option"><input type="radio" name="q10" value="c"> القديم، الأوسط، الحديث، المعدني</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="b">
+<h3>11. ما المعدنان اللذان وردا في صناعة أدوات العصر المعدني؟</h3>
+<label class="option"><input type="radio" name="q11" value="a"> الذهب والفضة</label>
+<label class="option"><input type="radio" name="q11" value="b"> البرونز والحديد</label>
+<label class="option"><input type="radio" name="q11" value="c"> الصوان والحجر</label>
+<div class="feedback"></div>
+</div>
+
+<div class="question" data-answer="a">
+<h3>12. أي من المخلفات التالية وردت في العصر الحجري الحديث؟</h3>
+<label class="option"><input type="radio" name="q12" value="a"> الفخار ورؤوس السهام وبيض النعام</label>
+<label class="option"><input type="radio" name="q12" value="b"> الخناجر الحديدية فقط</label>
+<label class="option"><input type="radio" name="q12" value="c"> أدوات الكتابة الورقية</label>
+<div class="feedback"></div>
+</div>
+
+<center>
+<button type="button" onclick="checkAnswers()">📊 احسب نتيجتي</button>
+<button type="reset" onclick="resetQuiz()">🔄 إعادة الاختبار</button>
+</center>
+</form>
+
+<div class="result" id="result">
+<h2>🏆 نتيجتك النهائية</h2>
+<h1 id="score"></h1>
+<p id="message"></p>
+</div>
+
+</div>
+
+<footer>
+  منصة التعلم التفاعلي | كرونولوجيا عصور ما قبل التاريخ
+</footer>
+
+<script>
+const explanations = [
+"كان الإنسان يعتمد على الصيد وجمع الغذاء والتنقل.",
+"تيغنيف موقع أثري في ولاية معسكر.",
+"تميز العصر الحجري الأوسط بظهور الأدوات الصوانية وتطور صناعتها.",
+"ارتبط العصر الحجري الحديث بالزراعة وتربية الحيوانات والاستقرار.",
+"شرشال من المواقع الأثرية المرتبطة بالعصر المعدني.",
+"ابتُكرت الكتابة حوالي سنة 3200 ق.م.",
+"هذه العبارة صحيحة، فقد اعتمد الإنسان على الصيد وجمع الغذاء.",
+"هذه العبارة خاطئة، فقد ظهر الاستقرار الزراعي في العصر الحجري الحديث.",
+"هذه العبارة صحيحة، فقد ساهمت الحاجة إلى التدوين في ابتكار الكتابة.",
+"الترتيب الصحيح: القديم، الأوسط، الحديث، المعدني.",
+"شهد العصر المعدني صناعة البرونز والحديد والحلي والخناجر.",
+"وردت هذه المخلفات ضمن العصر الحجري الحديث."
+];
+
+const questions = [...document.querySelectorAll(".question")];
+
+function updateProgress() {
+  let answered = 0;
+  questions.forEach((q,i) => {
+    if(q.querySelector("input:checked")) answered++;
+  });
+  document.getElementById("progress").value = answered;
+  document.getElementById("counter").textContent =
+    answered + " / " + questions.length;
+}
+
+document.querySelectorAll("input").forEach(input => {
+  input.addEventListener("change", updateProgress);
+});
+
+function checkAnswers() {
+  let score = 0;
+
+  questions.forEach((q,i) => {
+    const selected = q.querySelector("input:checked");
+    const feedback = q.querySelector(".feedback");
+    const answer = q.dataset.answer;
+
+    if(!selected) {
+      feedback.innerHTML = '<span class="wrong">لم تتم الإجابة عن هذا السؤال.</span>';
+      return;
+    }
+
+    if(selected.value === answer) {
+      score++;
+      feedback.innerHTML =
+        '<span class="correct">✓ إجابة صحيحة!</span><br>' +
+        explanations[i];
+    } else {
+      feedback.innerHTML =
+        '<span class="wrong">✗ إجابة غير صحيحة.</span><br>' +
+        explanations[i];
+    }
+  });
+
+  const result = document.getElementById("result");
+  result.style.display = "block";
+  document.getElementById("score").textContent =
+    score + " / " + questions.length;
+
+  let message = score >= 10 ? "ممتاز! أنت متمكن من الدرس 🌟" :
+                score >= 7 ? "جيد جداً! واصل المراجعة 👏" :
+                score >= 5 ? "نتيجة مقبولة، حاول تحسين مستواك 💪" :
+                "لا بأس، راجع الدرس وحاول مرة أخرى 📚";
+
+  document.getElementById("message").textContent = message;
+  result.scrollIntoView({behavior:"smooth"});
+}
+
+function resetQuiz() {
+  document.getElementById("result").style.display = "none";
+  questions.forEach(q => {
+    q.querySelector(".feedback").innerHTML = "";
+  });
+  updateProgress();
+}
+</script>
+</body>
+</html>
